@@ -193,15 +193,23 @@ export function ContactSection() {
             </CardContent>
           </Card>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex justify-center gap-8">
             {contactInfo.map((info, index) => (
-              <div key={info.title} className="text-center fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className={`${info.bg} rounded-full p-6 mx-auto mb-4 w-20 h-20 flex items-center justify-center`}>
+              <a
+                key={info.title}
+                href={info.title === "Email" ? `mailto:${info.value}` : 
+                      info.title === "LinkedIn" ? `https://${info.value}` : 
+                      `https://${info.value}`}
+                target={info.title === "Email" ? "_self" : "_blank"}
+                rel={info.title === "Email" ? "" : "noopener noreferrer"}
+                className="fade-in hover:scale-110 transition-transform duration-300"
+                style={{ animationDelay: `${index * 100}ms` }}
+                title={info.title}
+              >
+                <div className={`${info.bg} rounded-full p-6 w-20 h-20 flex items-center justify-center hover:shadow-lg transition-shadow duration-300`}>
                   <i className={`${info.icon} ${info.color} text-2xl`}></i>
                 </div>
-                <h5 className="font-semibold text-lg mb-2">{info.title}</h5>
-                <p className="text-muted-foreground">{info.value}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
