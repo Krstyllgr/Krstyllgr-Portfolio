@@ -9,13 +9,13 @@ export const PERSONAL_INFO = {
 
 export const SKILLS = [
   { icon: "fab fa-react", name: "React" },
-  { icon: "fab fa-bootstrap", name: "Bootstrap" },
-  { icon: "fas fa-wind", name: "Tailwind CSS" },
-  { icon: "fab fa-node-js", name: "Express.js" },
-  { icon: "fab fa-python", name: "Python" },
-  { icon: "fas fa-database", name: "Prisma" },
   { icon: "fab fa-js", name: "JavaScript" },
+  { icon: "fab fa-react", name: "React Native" },
+  { icon: "fab fa-python", name: "Python" },
   { icon: "fab fa-git-alt", name: "Git" },
+  { icon: "fab fa-node-js", name: "Express" },
+  { icon: "fas fa-database", name: "Prisma" },
+  { icon: "fas fa-code", name: "VSCode" },
 ];
 
 export const PROJECT_CATEGORIES = [

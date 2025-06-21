@@ -101,6 +101,7 @@ Three main tables:
 
 Changelog:
 - June 21, 2025. Initial setup
+- June 21, 2025. Updated skills section with user's preferred technologies: React, JavaScript, React Native, Python, Git, Express, Prisma, VSCode
 
 ## User Preferences
 
