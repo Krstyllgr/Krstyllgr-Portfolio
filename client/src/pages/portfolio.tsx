@@ -14,9 +14,9 @@ export default function Portfolio() {
   
   const { data: projects = [], isLoading, error } = useQuery<Project[]>({
     queryKey: ["/api/projects"],
+    staleTime: 0,
+    refetchOnMount: true,
   });
-
-  console.log("Portfolio data:", { projects, isLoading, error });
 
   useEffect(() => {
     if (activeFilter === "all") {
@@ -94,6 +94,8 @@ export default function Portfolio() {
             ))}
           </div>
           
+
+
           {isLoading ? (
             <div className="text-center py-12">
               <div className="loading mx-auto"></div>

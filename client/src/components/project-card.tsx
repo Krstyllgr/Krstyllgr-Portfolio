@@ -30,10 +30,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <img 
             src={project.imageUrl.startsWith('/src/') ? portfolioPlaceholder : project.imageUrl} 
             alt={project.title}
-            className="w-full h-48 object-cover rounded-t-lg"
           />
         ) : (
-          <div className="w-full h-48 bg-muted rounded-t-lg flex items-center justify-center">
+          <div className="icon-placeholder">
             <i className={getProjectIcon(project.category)}></i>
           </div>
         )}
