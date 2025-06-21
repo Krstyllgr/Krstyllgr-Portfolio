@@ -12,9 +12,11 @@ export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   
-  const { data: projects = [], isLoading } = useQuery<Project[]>({
+  const { data: projects = [], isLoading, error } = useQuery<Project[]>({
     queryKey: ["/api/projects"],
   });
+
+  console.log("Portfolio data:", { projects, isLoading, error });
 
   useEffect(() => {
     if (activeFilter === "all") {
