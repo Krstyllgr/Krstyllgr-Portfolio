@@ -18,7 +18,8 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="hero-content fade-in">
             <h1 className="hero-title">
-              Hi, I'm <span className="gradient-text">Kristyl Axlee Alegre</span>
+              Hi, I'm <br />
+              <span className="gradient-text">Kristyl Axlee Alegre</span>
             </h1>
             <p className="hero-subtitle">
               Web Developer crafting exceptional digital experiences
