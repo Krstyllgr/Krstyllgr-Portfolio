@@ -44,7 +44,7 @@ export class MemStorage implements IStorage {
         techStack: ["React", "Node.js", "Express", "JavaScript"],
         liveUrl: null,
         githubUrl: null,
-        imageUrl: null,
+        imageUrl: "/src/assets/portfolio-placeholder.svg",
         featured: true
       },
       {
@@ -54,7 +54,7 @@ export class MemStorage implements IStorage {
         techStack: ["React Native", "JavaScript", "Node.js"],
         liveUrl: null,
         githubUrl: null,
-        imageUrl: null,
+        imageUrl: "/src/assets/portfolio-placeholder.svg",
         featured: true
       },
       {
@@ -64,7 +64,7 @@ export class MemStorage implements IStorage {
         techStack: ["Express", "Node.js", "Prisma", "JavaScript"],
         liveUrl: null,
         githubUrl: null,
-        imageUrl: null,
+        imageUrl: "/src/assets/portfolio-placeholder.svg",
         featured: true
       },
       {
@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
         techStack: ["React", "JavaScript", "Node.js", "Express"],
         liveUrl: null,
         githubUrl: null,
-        imageUrl: null,
+        imageUrl: "/src/assets/portfolio-placeholder.svg",
         featured: false
       },
       {
@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
         techStack: ["Python", "JavaScript", "Git"],
         liveUrl: null,
         githubUrl: null,
-        imageUrl: null,
+        imageUrl: "/src/assets/portfolio-placeholder.svg",
         featured: false
       }
     ];

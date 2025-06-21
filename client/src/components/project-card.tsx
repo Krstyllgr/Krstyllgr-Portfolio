@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import type { Project } from "@shared/schema";
+import portfolioPlaceholder from "@/assets/portfolio-placeholder.svg";
 
 interface ProjectCardProps {
   project: Project;
@@ -25,7 +26,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="project-card fade-in">
       <div className="project-image">
-        <i className={getProjectIcon(project.category)}></i>
+        {project.imageUrl ? (
+          <img 
+            src={project.imageUrl.startsWith('/src/') ? portfolioPlaceholder : project.imageUrl} 
+            alt={project.title}
+            className="w-full h-48 object-cover rounded-t-lg"
+          />
+        ) : (
+          <div className="w-full h-48 bg-muted rounded-t-lg flex items-center justify-center">
+            <i className={getProjectIcon(project.category)}></i>
+          </div>
+        )}
       </div>
       <CardContent className="p-6">
         <h5 className="text-xl font-semibold mb-3">{project.title}</h5>
