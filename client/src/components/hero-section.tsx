@@ -14,6 +14,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="hero-section">
+      <div className="floating-shapes"></div>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="hero-content fade-in">
