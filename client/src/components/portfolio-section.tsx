@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "./project-card";
@@ -7,18 +7,16 @@ import type { Project } from "@shared/schema";
 
 export function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   
   const { data: projects = [], isLoading } = useQuery<Project[]>({
     queryKey: ["/api/projects/featured"],
   });
 
-  useEffect(() => {
+  const filteredProjects = useMemo(() => {
     if (activeFilter === "all") {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(project => project.category === activeFilter));
+      return projects;
     }
+    return projects.filter(project => project.category === activeFilter);
   }, [projects, activeFilter]);
 
   const categories = [
